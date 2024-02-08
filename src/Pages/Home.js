@@ -14,8 +14,8 @@ function Home() {
   useEffect(() => {
     fetch("http://localhost:8000/products")
       .then((r) => r.json())
-      .then((products) => {
-        setProductData(products); //Updating the state of product data to the fetched product array
+      .then((json) => {
+        setProductData(json); //Updating the state of product data to the fetched product array
         console.log(productData);
       });
   }, []); //Empty dependencies array to fetch the data only once
